@@ -1,0 +1,101 @@
+html {
+  --primary-color: #00ffff;
+  --secondary-color: #ffe047;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh 0 0 0;
+  overflow-x: hidden;
+}
+
+.title {
+  color: var(--secondary-color);
+  font-size: 70px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  text-shadow: 0 0 15px #ffe047b4;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 70px;
+}
+
+.timer_item {
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 50px #00ffff95, inset 0 0 20px #00ffff95;
+  width: 200px;
+}
+
+.timer_value {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 120px;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.1px;
+  padding: 10px 15px 10px;
+  text-shadow: 0 0 30px #00ffff;
+}
+
+.timer_desc {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px #ffe047f0;
+}
+
+@media (max-width: 1080px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .timer_value {
+    font-size: 100px;
+  }
+
+  .timer_desc {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .timer_item {
+    width: 120px;
+  }
+
+  .timer_value {
+    font-size: 60px;
+  }
+
+  .timer_desc {
+    font-size: 15px;
+  }
+}
