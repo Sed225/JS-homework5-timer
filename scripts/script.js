@@ -18,10 +18,10 @@ function handleTimerTick() {
   const formattedMinutes = minutes.toString().padStart(2, "0");
   const formattedSeconds = seconds.toString().padStart(2, "0");
 
-  timerDays.textContent = `${formattedDays}`;
-  timerHours.textContent = `${formattedHours}`;
-  timerMinutes.textContent = `${formattedMinutes}`;
-  timerSeconds.textContent = `${formattedSeconds}`;
+  timerDays.textContent = formattedDays;
+  timerHours.textContent = formattedHours;
+  timerMinutes.textContent = formattedMinutes;
+  timerSeconds.textContent = formattedSeconds;
 }
 
 setInterval(handleTimerTick, 1000);
