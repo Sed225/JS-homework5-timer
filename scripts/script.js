@@ -4,8 +4,9 @@ const timerMinutes = document.querySelector("#minutes");
 const timerSeconds = document.querySelector("#seconds");
 
 function handleTimerTick() {
-  const newYearDate = new Date("2026-01-01 00:00:00");
   const date = new Date();
+  const year = date.getFullYear();
+  const newYearDate = new Date(`${year + 1}-01-01 00:00:00`);
   const diffDate = newYearDate - date;
 
   const days = Math.floor(diffDate / 1000 / 60 / 60 / 24);
@@ -22,6 +23,8 @@ function handleTimerTick() {
   timerHours.textContent = formattedHours;
   timerMinutes.textContent = formattedMinutes;
   timerSeconds.textContent = formattedSeconds;
+
+  document.querySelector(".title").textContent = `Новий Рік ${year + 1}🎉`;
 }
 
 setInterval(handleTimerTick, 1000);
